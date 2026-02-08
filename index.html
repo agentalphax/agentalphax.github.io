@@ -49,4 +49,86 @@
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
 
         /* Grid Layout */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; }
+        
+        /* Cards Style */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .card h3 { color: var(--accent-color); margin-top: 0; font-size: 1.2rem; }
+        .card p { font-size: 0.95rem; color: #8b949e; }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: transparent;
+            color: var(--terminal-green);
+            text-decoration: none;
+            border: 1px solid var(--terminal-green);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .btn:hover { 
+            background-color: var(--terminal-green); 
+            color: white; 
+        }
+
+        /* Footer */
+        footer { text-align: center; margin-top: 80px; color: #484f58; font-size: 0.8rem; border-top: 1px solid var(--border-color); padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Hamza (Agent Alpha)</h1>
+            <p class="role">Full-Stack Security Researcher & Engineer</p>
+            <p class="status">
+                root@kali:~$ ./hunt_bugs.sh <span class="cursor"></span>
+            </p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h3>⛓️ Blockchain Security</h3>
+                <p>Deep auditing of Consensus protocols (PoS), Smart Contracts, and Node infrastructure.</p>
+                <p style="margin-top:10px; color:#c9d1d9;"><strong>Active Research:</strong> TRON DAO (Logic Flaws & DoS).</p>
+                <a href="https://hackerone.com/agentxalpha" class="btn" target="_blank">View H1 Profile</a>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Web & Infrastructure</h3>
+                <p>Securing modern web stacks against IDOR, Injection, and Business Logic vulnerabilities.</p>
+                <p style="margin-top:10px; color:#c9d1d9;"><strong>Focus:</strong> Automating Recon & Fuzzing.</p>
+            </div>
+
+            <div class="card">
+                <h3>🛠️ Arsenal & Tools</h3>
+                <p>Custom-built scripts for vulnerability scanning and exploit development (PoC).</p>
+                <p style="margin-top:10px; color:#c9d1d9;"><strong>Languages:</strong> Python, Bash, Java.</p>
+                <a href="https://github.com/agentalphax/agentalphax.github.io/blob/main/TronConsensusAudit.py" class="btn" target="_blank">View Python Tool</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Encrypted Connection Established // PGP Key Available on Request</p>
+            <p>&copy; 2024 Agent Alpha. Built with 💻 & ☕.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
